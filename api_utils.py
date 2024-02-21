@@ -46,5 +46,4 @@ def text_to_audio(api_key, voice_id, response_text):
                 f.write(chunk)
         f.flush()
         temp_filename = f.name
-
     return temp_filename

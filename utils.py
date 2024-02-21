@@ -158,7 +158,6 @@ def load_input_audio(file_path, fps, results_path):
 	if not file_path.endswith('.wav'):
 		temp_file = f"{os.path.dirname(results_path)}/temp.wav"
 		command = 'ffmpeg -y -i {} -strict -2 {}'.format(file_path, temp_file)
-
 		subprocess.call(command, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 		file_path = temp_file
 
